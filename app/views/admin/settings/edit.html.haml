@@ -64,30 +64,30 @@
   .fields-group
     = f.input :open_deletion, as: :boolean, wrapper: :with_label, label: t('admin.settings.registrations.deletion.title'), hint: t('admin.settings.registrations.deletion.desc_html')
 
-  - unless whitelist_mode?
-    .fields-group
-      = f.input :activity_api_enabled, as: :boolean, wrapper: :with_label, label: t('admin.settings.activity_api_enabled.title'), hint: t('admin.settings.activity_api_enabled.desc_html'), recommended: true
+  -#- unless whitelist_mode?
+  .fields-group
+    = f.input :activity_api_enabled, as: :boolean, wrapper: :with_label, label: t('admin.settings.activity_api_enabled.title'), hint: t('admin.settings.activity_api_enabled.desc_html'), recommended: true
 
-    .fields-group
-      = f.input :peers_api_enabled, as: :boolean, wrapper: :with_label, label: t('admin.settings.peers_api_enabled.title'), hint: t('admin.settings.peers_api_enabled.desc_html'), recommended: true
+  .fields-group
+    = f.input :peers_api_enabled, as: :boolean, wrapper: :with_label, label: t('admin.settings.peers_api_enabled.title'), hint: t('admin.settings.peers_api_enabled.desc_html'), recommended: true
 
-    .fields-group
-      = f.input :preview_sensitive_media, as: :boolean, wrapper: :with_label, label: t('admin.settings.preview_sensitive_media.title'), hint: t('admin.settings.preview_sensitive_media.desc_html')
+  .fields-group
+    = f.input :preview_sensitive_media, as: :boolean, wrapper: :with_label, label: t('admin.settings.preview_sensitive_media.title'), hint: t('admin.settings.preview_sensitive_media.desc_html')
 
-    .fields-group
-      = f.input :profile_directory, as: :boolean, wrapper: :with_label, label: t('admin.settings.profile_directory.title'), hint: t('admin.settings.profile_directory.desc_html')
+  .fields-group
+    = f.input :profile_directory, as: :boolean, wrapper: :with_label, label: t('admin.settings.profile_directory.title'), hint: t('admin.settings.profile_directory.desc_html')
 
-    .fields-group
-      = f.input :trends, as: :boolean, wrapper: :with_label, label: t('admin.settings.trends.title'), hint: t('admin.settings.trends.desc_html')
+  .fields-group
+    = f.input :trends, as: :boolean, wrapper: :with_label, label: t('admin.settings.trends.title'), hint: t('admin.settings.trends.desc_html')
 
-    .fields-group
-      = f.input :trendable_by_default, as: :boolean, wrapper: :with_label, label: t('admin.settings.trendable_by_default.title'), hint: t('admin.settings.trendable_by_default.desc_html')
+  .fields-group
+    = f.input :trendable_by_default, as: :boolean, wrapper: :with_label, label: t('admin.settings.trendable_by_default.title'), hint: t('admin.settings.trendable_by_default.desc_html')
 
-    .fields-group
-      = f.input :trending_status_cw, as: :boolean, wrapper: :with_label, label: t('admin.settings.trending_status_cw.title'), hint: t('admin.settings.trending_status_cw.desc_html')
+  .fields-group
+    = f.input :trending_status_cw, as: :boolean, wrapper: :with_label, label: t('admin.settings.trending_status_cw.title'), hint: t('admin.settings.trending_status_cw.desc_html')
 
-    .fields-group
-      = f.input :noindex, as: :boolean, wrapper: :with_label, label: t('admin.settings.default_noindex.title'), hint: t('admin.settings.default_noindex.desc_html')
+  .fields-group
+    = f.input :noindex, as: :boolean, wrapper: :with_label, label: t('admin.settings.default_noindex.title'), hint: t('admin.settings.default_noindex.desc_html')
 
   .fields-group
     = f.input :hide_followers_count, as: :boolean, wrapper: :with_label, label: t('admin.settings.hide_followers_count.title'), hint: t('admin.settings.hide_followers_count.desc_html')

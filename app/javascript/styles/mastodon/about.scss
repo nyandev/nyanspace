@@ -904,3 +904,7 @@ $small-breakpoint: 960px;
     color: $primary-text-color;
   }
 }
+
+#allowlist_grid {
+  columns: 3 200px;
+}
