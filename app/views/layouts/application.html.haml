@@ -46,7 +46,12 @@
     = stylesheet_link_tag custom_css_path, skip_pipeline: true, host: root_url, media: 'all'
 
   %body{ class: body_classes }
-    = content_for?(:content) ? yield(:content) : yield
+    .neko-body
+      .neko-bg
+        .neko-bg__left
+        .neko-bg__content
+          = content_for?(:content) ? yield(:content) : yield
+        .neko-bg__right
 
     .logo-resources{ 'tabindex' => '-1', 'inert' => true, 'aria-hidden' => true }
       = render_symbol :icon

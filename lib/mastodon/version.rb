@@ -21,7 +21,7 @@ module Mastodon
     end
 
     def suffix
-      '+neko/glitch'
+      '+neko.glitch'
     end
 
     def to_a
@@ -33,7 +33,7 @@ module Mastodon
     end
 
     def repository
-      ENV.fetch('GITHUB_REPOSITORY', 'nyandev/nyanspace')
+      ENV.fetch('GITHUB_REPOSITORY', 'glitch-soc/mastodon')
     end
 
     def source_base_url

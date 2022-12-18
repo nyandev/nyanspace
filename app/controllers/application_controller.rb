@@ -40,6 +40,11 @@ class ApplicationController < ActionController::Base
 
   skip_before_action :verify_authenticity_token, only: :raise_not_found
 
+  content_security_policy do |p|
+    p.style_src :self, :unsafe_inline, "https://neko.academy", "https://fonts.googleapis.com"
+    p.font_src :self, "https://neko.academy", "https://fonts.gstatic.com"
+  end
+
   def raise_not_found
     raise ActionController::RoutingError, "No route matches #{params[:unmatched_route]}"
   end

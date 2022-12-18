@@ -7,6 +7,8 @@ class HomeController < ApplicationController
 
   def index
     expires_in 0, public: true unless user_signed_in?
+    @body_classes = 'app-body'
+    @is_app = true
   end
 
   private
