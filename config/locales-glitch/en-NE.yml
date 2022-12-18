@@ -1,0 +1,10 @@
+---
+en:
+  admin:
+    settings:
+      outgoing_spoilers:
+        desc_html: When federating posts, add this content warning to posts that do not have one. It is useful if your server is specialized in content other servers might want to have under a Content Warning. Media will also be marked as sensitive.
+        title: Content warning for outgoing posts
+      show_reblogs_in_public_timelines:
+        desc_html: Show public boosts of public posts in local and public timelines.
+        title: Show boosts in public timelines

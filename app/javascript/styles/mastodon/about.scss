@@ -54,3 +54,7 @@ $fluid-breakpoint: $maximum-width + 20px;
     }
   }
 }
+
+#allowlist_grid {
+  columns: 3 200px;
+}
