@@ -1,0 +1,1665 @@
+// Notes!
+// Sass color functions, "darken" and "lighten" are automatically replaced.
+
+.glitch.local-settings {
+  background: $ui-base-color;
+
+  &__navigation {
+    background: darken($ui-base-color, 8%);
+  }
+
+  &__navigation__item {
+    background: darken($ui-base-color, 8%);
+
+    &:hover {
+      background: $ui-base-color;
+    }
+  }
+}
+
+.notification__dismiss-overlay {
+  .wrappy {
+    box-shadow: unset;
+  }
+
+  .ckbox {
+    text-shadow: unset;
+  }
+}
+
+.status.status-direct {
+  background: darken($ui-base-color, 8%);
+  border-bottom-color: darken($ui-base-color, 12%);
+
+  &.collapsed> .status__content:after {
+    background: linear-gradient(rgba(darken($ui-base-color, 8%), 0), rgba(darken($ui-base-color, 8%), 1));
+  }
+}
+
+.focusable:focus.status.status-direct {
+  background: darken($ui-base-color, 4%);
+
+  &.collapsed> .status__content:after {
+    background: linear-gradient(rgba(darken($ui-base-color, 4%), 0), rgba(darken($ui-base-color, 4%), 1));
+  }
+}
+
+// Change columns' default background colors
+.column {
+  > .scrollable {
+    background: darken($ui-base-color, 13%);
+  }
+}
+
+.status.collapsed .status__content:after {
+  background: linear-gradient(rgba(darken($ui-base-color, 13%), 0), rgba(darken($ui-base-color, 13%), 1));
+}
+
+.drawer__inner {
+  background: $ui-base-color;
+}
+
+.drawer__inner__mastodon {
+  background: $ui-base-color url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.80078 31.757813" width="234.80078" height="31.757812"><path d="M19.599609 0c-1.05 0-2.10039.375-2.90039 1.125L0 16.925781v14.832031h234.80078V17.025391l-16.5-15.900391c-1.6-1.5-4.20078-1.5-5.80078 0l-13.80078 13.099609c-1.6 1.5-4.19883 1.5-5.79883 0L179.09961 1.125c-1.6-1.5-4.19883-1.5-5.79883 0L159.5 14.224609c-1.6 1.5-4.20078 1.5-5.80078 0L139.90039 1.125c-1.6-1.5-4.20078-1.5-5.80078 0l-13.79883 13.099609c-1.6 1.5-4.20078 1.5-5.80078 0L100.69922 1.125c-1.600001-1.5-4.198829-1.5-5.798829 0l-13.59961 13.099609c-1.6 1.5-4.200781 1.5-5.800781 0L61.699219 1.125c-1.6-1.5-4.198828-1.5-5.798828 0L42.099609 14.224609c-1.6 1.5-4.198828 1.5-5.798828 0L22.5 1.125C21.7.375 20.649609 0 19.599609 0z" fill="#{hex-color(darken($ui-base-color, 13%))}"/></svg>') no-repeat bottom / 100% auto !important;
+
+  .mastodon {
+    filter: contrast(75%) brightness(75%) !important;
+  }
+}
+
+// Change the default appearance of the content warning button
+.status__content {
+
+  .status__content__spoiler-link {
+
+    background: lighten($ui-base-color, 30%);
+
+    &:hover {
+      background: lighten($ui-base-color, 35%);
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+// Change the background colors of media and video spoilers
+.media-spoiler,
+.video-player__spoiler,
+.account-gallery__item a {
+  background: $ui-base-color;
+}
+
+// Change the colors used in the dropdown menu
+.dropdown-menu {
+  background: $ui-base-color;
+}
+
+.dropdown-menu__arrow {
+
+  &.left {
+    border-left-color: $ui-base-color;
+  }
+
+  &.top {
+    border-top-color: $ui-base-color;
+  }
+
+  &.bottom {
+    border-bottom-color: $ui-base-color;
+  }
+
+  &.right {
+    border-right-color: $ui-base-color;
+  }
+
+}
+
+.dropdown-menu__item {
+  a,
+  button {
+    background: $ui-base-color;
+    color: $ui-secondary-color;
+  }
+}
+
+// Change the default color of several parts of the compose form
+.composer {
+
+  .composer--spoiler input, .compose-form__autosuggest-wrapper textarea {
+    color: lighten($ui-base-color, 80%);
+
+    &:disabled { background: lighten($simple-background-color, 10%) }
+
+    &::placeholder {
+      color: lighten($ui-base-color, 70%);
+    }
+  }
+
+  .composer--options-wrapper {
+    background: lighten($ui-base-color, 10%);
+  }
+
+  .composer--options > hr {
+    display: none;
+  }
+
+  .composer--options--dropdown--content--item {
+    color: $ui-primary-color;
+    
+    strong {
+      color: $ui-primary-color;
+    }
+
+  }
+
+}
+
+.composer--upload_form--actions .icon-button {
+  color: lighten($white, 7%);
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $white;
+  }
+}
+
+.language-dropdown__dropdown__results__item:hover,
+.language-dropdown__dropdown__results__item:focus,
+.language-dropdown__dropdown__results__item:active {
+  background-color: $ui-base-color;
+}
+
+.dropdown-menu__separator,
+.dropdown-menu__item.edited-timestamp__history__item,
+.dropdown-menu__container__header,
+.compare-history-modal .report-modal__target,
+.report-dialog-modal .poll__option.dialog-option {
+  border-bottom-color: lighten($ui-base-color, 12%);
+}
+
+.report-dialog-modal__container {
+  border-bottom-color: lighten($ui-base-color, 12%);
+}
+
+.status__content,
+.reply-indicator__content {
+  a {
+    color: $highlight-text-color;
+  }
+}
+
+.emoji-mart-bar {
+  border-color: darken($ui-base-color, 4%);
+
+  &:first-child {
+    background: lighten($ui-base-color, 10%);
+  }
+}
+
+.emoji-mart-search input {
+  background: rgba($ui-base-color, 0.3);
+  border-color: $ui-base-color;
+}
+
+.autosuggest-textarea__suggestions {
+  background: lighten($ui-base-color, 10%)
+}
+
+.autosuggest-textarea__suggestions__item {
+  &:hover,
+  &:focus,
+  &:active,
+  &.selected {
+    background: darken($ui-base-color, 4%);
+  }
+}
+
+.react-toggle-track {
+  background: $ui-secondary-color;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background: lighten($ui-secondary-color, 10%);
+}
+
+.react-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background: darken($ui-highlight-color, 10%);
+}
+
+// Change the background colors of modals
+.actions-modal,
+.boost-modal,
+.favourite-modal,
+.confirmation-modal,
+.mute-modal,
+.block-modal,
+.report-modal,
+.report-dialog-modal,
+.embed-modal,
+.error-modal,
+.onboarding-modal,
+.compare-history-modal,
+.report-modal__comment .setting-text__wrapper,
+.report-modal__comment .setting-text,
+.report-dialog-modal__textarea {
+  background: $white;
+  border: 1px solid lighten($ui-base-color, 8%);
+}
+
+.report-dialog-modal .dialog-option .poll__input {
+  color: $white;
+}
+
+.report-modal__comment {
+  border-right-color: lighten($ui-base-color, 8%);
+}
+
+.report-modal__container {
+  border-top-color: lighten($ui-base-color, 8%);
+}
+
+.boost-modal__action-bar,
+.favourite-modal__action-bar,
+.confirmation-modal__action-bar,
+.mute-modal__action-bar,
+.block-modal__action-bar,
+.onboarding-modal__paginator,
+.error-modal__footer {
+  background: darken($ui-base-color, 6%);
+
+  .onboarding-modal__nav,
+  .error-modal__nav {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($ui-base-color, 12%);
+    }
+  }
+}
+
+// Change the default color used for the text in an empty column or on the error column
+.empty-column-indicator,
+.error-column {
+  color: lighten($ui-base-color, 60%);
+}
+
+// Change the default colors used on some parts of the profile pages
+.activity-stream-tabs {
+
+  background: $account-background-color;
+
+  a {
+    &.active {
+      color: $ui-primary-color;
+      }
+  }
+
+}
+
+.activity-stream {
+
+  .entry {
+    background: $account-background-color;
+  }
+
+  .status.light {
+
+    .status__content {
+      color: $primary-text-color;
+    }
+
+    .display-name {
+      strong {
+        color: $primary-text-color;
+      }
+    }
+
+  }
+
+}
+
+.accounts-grid {
+  .account-grid-card {
+
+    .controls {
+      .icon-button {
+        color: $ui-secondary-color;
+      }
+    }
+
+    .name {
+      a {
+        color: $primary-text-color;
+      }
+    }
+
+    .username {
+      color: $ui-secondary-color;
+    }
+
+    .account__header__content {
+      color: $primary-text-color;
+    }
+
+  }
+}
+
+.button.logo-button {
+  color: $white;
+
+  svg {
+    fill: $white;
+  }
+}
+
+.public-layout {
+  .header,
+  .public-account-header,
+  .public-account-bio {
+    box-shadow: none;
+  }
+
+  .header {
+    background: lighten($ui-base-color, 12%);
+  }
+
+  .public-account-header {
+    &__image {
+      background: lighten($ui-base-color, 12%);
+
+      &::after {
+        box-shadow: none;
+      }
+    }
+
+    &__tabs {
+      &__name {
+        h1,
+        h1 small {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.account__section-headline a.active::after {
+  border-color: transparent transparent $white;
+}
+
+.hero-widget,
+.box-widget,
+.contact-widget,
+.landing-page__information.contact-widget,
+.moved-account-widget,
+.memoriam-widget,
+.activity-stream,
+.nothing-here,
+.directory__tag > a,
+.directory__tag > div {
+  box-shadow: none;
+}
+
+.mute-modal select {
+  border: 1px solid lighten($ui-base-color, 8%);
+  background: $simple-background-color url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.933 18.467' height='19.698' width='15.929'><path d='M3.467 14.967l-3.393-3.5H14.86l-3.392 3.5c-1.866 1.925-3.666 3.5-4 3.5-.335 0-2.135-1.575-4-3.5zm.266-11.234L7.467 0 11.2 3.733l3.733 3.734H0l3.733-3.734z' fill='#{hex-color(lighten($ui-base-color, 8%))}'/></svg>") no-repeat right 8px center / auto 16px;
+}
+
+
+//////////// BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOPPPPPPPPPPPPPPP
+/// 
+/// 
+
+$neko-grid-width: 1080px;
+$neko-bg-decor-width: 470px;
+// $neko-bg-border-width: 4px;
+$neko-bg-border-width: 0px;
+$neko-bg-decor-height: 1280px;
+$navitab-height: 26px;
+$neko-header-height: 150px;
+$neko-footer-height: 60;
+
+$neko-bg-fullsidesbreakpoint: ($neko-grid-width + $neko-bg-decor-width + $neko-bg-decor-width);
+
+$neko-content-title-color: #3f2110;
+
+$neko-inpage-gutter: 0.9375rem;
+$neko-inpage-mini-gutter: 8px;
+
+$neko-content-bgcolor: #f6f6f6;
+$neko-content-bordercolor: #e4e4e4;
+
+$neko-post-gutter: 15px;
+$neko-post-padding: 10px 15px;
+
+$neko-bg-border-color: #f1d2fe; // #95adc7
+
+$neko-secondary-color: #fffafa;
+
+$neko-input-border-normal: 1px dashed #0000002e;
+$neko-forms-input-border-normal: 1px dashed #0000002e;
+$neko-forms-input-border-hover: 1px dashed #af4b787d;
+$neko-forms-input-border-active: 1px solid #ff0078;
+$neko-forms-input-border-valid: 1px dashed #5dc728;
+$neko-forms-input-border-invalid: 1px dashed #ea2229;
+
+html {
+  min-height: 100%;
+  min-width: 240px;
+  box-sizing: border-box;
+  display: block;
+}
+
+body,
+body.admin {
+  background: #badeff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: inherit !important;
+  position: static !important;
+  width: 100%;
+  height: 100%;
+}
+
+.memoriam-widget, .page-header {
+  box-shadow: none !important;
+}
+
+.page-header {
+  margin-top: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.admin-wrapper {
+  display: flex;
+  justify-content: left;
+  min-height: calc(100vh - 41px);
+  .sidebar-wrapper,
+  .content-wrapper {
+    display: block;
+    height: auto;
+    flex: none;
+  }
+  .sidebar {
+    .logo {
+      margin: 22px auto 12px !important;
+      width: 90% !important;
+      height: auto !important;
+    }
+  }
+  .content-wrapper .content {
+    padding: 40px 15px 20px 25px !important;
+  }
+}
+
+.neko-body {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.neko-bg {
+  max-width: $neko-grid-width;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+  .neko-bg__left,
+  .neko-bg__right {
+    display: none;
+  }
+  .neko-bg__content {
+    //background: #f1f1f1 url("~images/neko/bg-pattern.png") repeat top;
+    background: #efefef; //rgb(249, 249, 249);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    > div.grid {
+      width: 100%;
+    }
+    .container {
+      margin-bottom: 0 !important;
+      padding-bottom: 88px;
+      .landing .hero-widget .hero-widget__img {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (min-width: 738px) {
+    .container .landing .hero-widget {
+      overflow: hidden;
+      border-radius: 4px;
+      .hero-widget__img,
+      .hero-widget__img img,
+      .hero-widget__text,
+      .hero-widget__footer {
+        border-radius: 0;
+      }
+      .hero-widget__img {
+        display: block;
+      }
+    }
+  }
+  @media only screen and (min-width: $neko-grid-width) {
+    .neko-bg__left,
+    .neko-bg__right {
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      width: $neko-bg-decor-width;
+      min-height: 100vh;
+      height: 100%;
+      background-size: 100% auto !important;
+      background-repeat: no-repeat;
+      z-index: 1; // hack to cover up unwanted box-shadow bleeds from content
+    }
+    .neko-bg__left {
+//      left: -($neko-bg-decor-width + $neko-bg-border-width);
+      left: -($neko-bg-decor-width);
+      background-image: url("~images/neko/bg-left_940.jpg");
+//      border-right: 1px solid $neko-bg-border-color;
+    }
+    .neko-bg__left:before {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+//      right: -($neko-bg-border-width + 1px);
+      right: -($neko-bg-border-width);
+      bottom: 0;
+//      border-right: $neko-bg-border-width solid white;
+    }
+    .neko-bg__right {
+//      right: -($neko-bg-decor-width + $neko-bg-border-width);
+      right: -($neko-bg-decor-width);
+      background-image: url("~images/neko/bg-right_940.jpg");
+//      border-left: 1px solid $neko-bg-border-color;
+    }
+    .neko-bg__right:before {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+//      left: -($neko-bg-border-width + 1px);
+      left: -($neko-bg-border-width);
+      bottom: 0;
+//      border-left: $neko-bg-border-width solid white;
+    }
+  }
+  @media only screen and (min-width: $neko-bg-fullsidesbreakpoint) {
+    .neko-bg__left,
+    .neko-bg__right {
+      width: $neko-bg-decor-width;
+      width: calc(50vw - #{$neko-grid-width / 2});
+    }
+    .neko-bg__left {
+      left: -($neko-bg-decor-width + $neko-bg-border-width);
+      left: calc(0px - (#{50}vw - #{$neko-grid-width / 2} + #{$neko-bg-border-width}));
+    }
+    .neko-bg__right {
+      right: -($neko-bg-decor-width + $neko-bg-border-width);
+      right: calc(0px - (#{50}vw - #{$neko-grid-width / 2} + #{$neko-bg-border-width}));
+    }
+  }
+}
+
+.neko-bg .container {
+  .landing {
+    margin-bottom: 0 !important;
+    .landing__brand {
+      display: none;
+    }
+    @media only screen and (min-width: 980px) {
+      padding-top: 50px !important;
+      padding-bottom: 20px !important;
+    }
+  }
+}
+
+.public-layout .public-account-header__image,
+.public-layout .public-account-header__image img {
+  border-radius: 0 !important;
+}
+
+.box-widget,
+.hero-widget {
+  background: rgba(250, 250, 250, 1) !important;
+  border: 1px solid #ff56af75 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 15px rgba(220, 168, 218, 0.32) !important;
+  margin: 30px 0;
+  .simple_form input[type=email], .simple_form input[type=number], .simple_form input[type=password], .simple_form input[type=text], .simple_form textarea {
+    background: white !important;
+    border: 1px dashed #8c8c8c59 !important;
+  }
+}
+
+body.app-body {
+  .neko-bg {
+    max-width: 1350px !important;
+    .neko-bg__content {
+      .neko-header {
+        display: none;
+      }
+      .columns-area--mobile .status {
+        background: $neko-secondary-color !important;
+      }
+      .compose-form {
+        padding: 10px 0 0 0;
+      }
+      .column>.scrollable {
+        background: transparent !important;
+      }
+      .app-holder .getting-started__footer p {
+        display: none;
+      }
+    }
+  }
+}
+
+$neko-applayout-break-onepanel: 895px;
+$neko-applayout-break-twopanel: 1190px;
+
+.columns-area__panels__main {
+  width: 100%;
+  max-width: none !important;
+  @media screen and (min-width: $neko-applayout-break-onepanel) {
+    width: calc(100vw - 317px);
+    padding: 0 0 0 10px;
+  }
+  @media screen and (min-width: $neko-applayout-break-twopanel) {
+    width: calc(100vw - 602px);
+    max-width: 760px !important;
+    padding: 0 10px;
+  }
+}
+
+$neko-navigation-font: "Titillium Web", sans-serif;
+
+.navigation-panel {
+  font-family: $neko-navigation-font;
+  font-weight: 600px;
+  .column-link {
+    font-size: 0.95rem;
+    padding: 10px 5px;
+  }
+}
+
+body.app-body.layout-single-column,
+body.with-modals {
+  overflow-y: visible !important;
+}
+
+.neko-topbar {
+  height: 40px;
+  background: linear-gradient(to bottom, #ffffff 0%,#f7f7f7 49%,#f0f0f0 97%,#f0f0f0 97%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=0 );
+  border-bottom: 1px solid #bebebe;
+  padding: 0 12px 0 10px;
+  .neko-topbar__logo {
+    padding: 0 10px 0 0;
+    vertical-align: middle;
+    float: left;
+    clear: none;
+    border-right: 2px solid rgba(255, 110, 168, 0.52);
+    margin-top: 10px;
+    margin-right: 13px;
+    img {
+      width: 80px;
+      top: 2px;
+      position: relative;
+    }
+  }
+}
+
+.neko-footer {
+  background: url("~images/neko/footer-bg_2400.jpg"), rgb(255, 47, 109);
+  border-top: 0.0625rem solid #b34066;
+  padding: 12px 20px 0;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 12px;
+  color: white;
+  .grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    > div {
+      padding-bottom: 12px;
+    }
+    .column-0 {
+      grid-column: 1;
+      grid-row: 1;
+      min-width: 0;
+    }
+    .column-1 {
+      grid-column: 2;
+      grid-row: 1;
+      min-width: 0;
+    }
+    .column-2 {
+      grid-column: 3;
+      grid-row: 1;
+      min-width: 0;
+      text-align: center;
+      display: none;
+      padding-bottom: 0;
+    }
+    .column-3 {
+      grid-column: 3;
+      grid-row: 1;
+      min-width: 0;
+    }
+    .column-4 {
+      grid-column: 4;
+      grid-row: 1;
+      min-width: 0;
+    }
+  }
+  @media only screen and (min-width: 640px) {
+    .grid {
+      grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+      .column-2 {
+        grid-column: 3;
+        display: block !important;
+      }
+      .column-3 {
+        grid-column: 4;
+      }
+      .column-4 {
+        grid-column: 5;
+      }
+    }
+  }
+  h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: $darker-text-color;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  h4.neko-footer__what-is {
+    margin: 4px 0 0 0;
+    &, a {
+      color: white;
+    }
+  }
+  ul a {
+    text-decoration: none;
+    color: white;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  .brand {
+    margin: 0 auto;
+    .brand__site {
+      width: auto;
+      height: 37px;
+      display: block;
+    }
+    .brand__ankea {
+      width: auto;
+      height: 15px;
+      opacity: 0.75;
+      margin: 9px 0 5px;
+    }
+  }
+}
+
+.logo-container {
+  margin: 30px auto 0 !important;
+  padding: 0 25px !important;
+  .neko-logobox {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.public-layout {
+  width: 100% !important;
+}
+
+.container,
+.public-layout .container {
+  max-width: none !important;
+}
+
+
+/*.app-holder,
+.app-holder > div {
+  overflow: auto !important;
+  position: absolute;
+}*/
+
+.app-holder {
+  .tabs-bar__wrapper {
+    background: transparent;
+  }
+}
+
+.app-holder#mastodon {
+  height: calc(100% - 128px);
+  scrollbar-color: lighten($ui-base-color, 4%) rgba($base-overlay-background, 0.1);
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: lighten($ui-base-color, 4%);
+    border: 0px none $base-border-color;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten($ui-base-color, 6%);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: lighten($ui-base-color, 4%);
+  }
+  ::-webkit-scrollbar-track {
+    border: 0px none $base-border-color;
+    border-radius: 0;
+    background: rgba($base-overlay-background, 0.1);
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: $ui-base-color;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: $ui-base-color;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+.landing-page {
+  .grid {
+    grid-gap: 0 !important;
+    .column-0 {
+      display: block !important;
+      grid-column: 1 / 3;
+      grid-row: 1;
+      border-bottom: 1px solid #cdcdcd;
+    }
+    .column-1 {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .column-2 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .column-3 {
+      grid-column: 3;
+      grid-row: 1 / 4;
+    }
+    .column-4 {
+      grid-column: 1 / 3;
+      grid-row: 3;
+    }
+  }
+  @media screen and (max-width: $small-breakpoint) {
+    .grid {
+      grid-template-columns: 40% 60%;
+      .column-0 {
+        display: block !important;
+        grid-column: 1 / 3;
+        grid-row: 1;
+      }
+      .column-1 {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .column-2 {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .column-3 {
+        grid-column: 1;
+        grid-row: 3;
+      }
+      .column-4 {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+  }
+  @media screen and (max-width: $column-breakpoint) {
+    .grid {
+      grid-template-columns: auto;
+      .column-0 {
+        display: block !important;
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .column-1 {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .column-2 {
+        grid-column: 1;
+        grid-row: 3;
+      }
+      .column-3 {
+        grid-column: 1;
+        grid-row: 4;
+      }
+      .column-4 {
+        grid-column: 1;
+        grid-row: 5;
+      }
+    }
+  }
+}
+
+.landing-page {
+  &.alternative {
+    padding: 0 0 !important;
+  }
+  &__information {
+//    padding: 45px 40px;
+    margin: 0 !important;
+  }
+  &__hero {
+    margin: 0 !important;
+    img {
+      display: block;
+      margin: 0;
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+  &__information,
+  &__forms,
+  #mastodon-timeline {
+    background: #fbfbfb; // $ui-base-color
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    .column {
+      border-radius: 0 !important;
+    }
+  }
+  #mastodon-timeline {
+    .scrollable {
+      background: linear-gradient(rgba(0, 0, 0, 0.11), transparent) center top / 100% 20px no-repeat, rgb(245, 245, 245);
+      border-left: 1px solid #cdcdcd;
+    }
+  }
+}
+
+.column-header,
+.column-back-button,
+.column-back-button--slim-button {
+  background: url("~images/neko/bg-cloudsbar_1920.jpg") center top/cover repeat #54c5fd;
+//  border-top: 1px solid rgb(181, 206, 218);
+  border-bottom: 1px solid rgb(243, 248, 249);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  min-height: 48px;
+  > button {
+    padding: 10px 0 10px 14px;
+    text-shadow: rgb(55, 132, 175) 0px 1px 3px;
+  }
+  .column-header__back-button,
+  .column-header__button {
+    color: white !important;
+    background: transparent !important;
+  }
+  .column-header__button.active {
+    color: black !important;
+    background: #f7fbff7a !important;
+  }
+}
+
+.neko-header {
+  background: #ff2f6d;
+  // background: no-repeat 80% top / 320px url("~images/neko/header-charbg_640.png"), repeat-x 0 0 / 1200px auto url("~images/neko/header-bg.jpg"), #ff2f6d;
+  padding: 0;
+  height: 150px;
+  .neko-header__title {
+    margin: 0;
+    text-align: left;
+    float: left;
+    clear: none;
+    height: ($neko-header-height - $navitab-height);
+    .neko-header__title__logo {
+      max-width: 500px;
+      margin: 35px 0 0 45px;
+      display: block;
+      img {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .neko-header__title__tagline {
+      display: none;
+    }
+  }
+}
+
+.neko-topnav {
+  background: linear-gradient(180deg,#fff 0,#f7f7f7 49%,#f0f0f0 97%,#f0f0f0 0,#fff);
+  border-bottom: 1px solid #bebebe;
+  box-shadow: none;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  .neko-topnav__left,
+  .neko-topnav__center,
+  .neko-topnav__right {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    flex: 1 1 33.3%;
+    min-height: 1px;
+    .nav-button {
+      background: #a6b9c9;
+      margin: 8px 8px 8px 0;
+      border-radius: 4px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0 1.2rem;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #282c37;
+      white-space: nowrap;
+      text-align: center;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.neko-topnav__left {
+  justify-content: flex-start;
+}
+.neko-topnav__center {
+  justify-content: center;
+}
+.neko-topnav__right {
+  justify-content: flex-end;
+}
+
+// Change the colors of button texts
+.button {
+  color: $white;
+
+  &.button-alternative-2 {
+    color: $white;
+  }
+}
+
+// Change default background colors of columns
+.column {
+  > .scrollable {
+    background: $white;
+  }
+}
+
+.drawer__inner {
+  background: $ui-base-color;
+}
+
+.drawer__inner__mastodon {
+  background: $ui-base-color url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.80078 31.757813" width="234.80078" height="31.757812"><path d="M19.599609 0c-1.05 0-2.10039.375-2.90039 1.125L0 16.925781v14.832031h234.80078V17.025391l-16.5-15.900391c-1.6-1.5-4.20078-1.5-5.80078 0l-13.80078 13.099609c-1.6 1.5-4.19883 1.5-5.79883 0L179.09961 1.125c-1.6-1.5-4.19883-1.5-5.79883 0L159.5 14.224609c-1.6 1.5-4.20078 1.5-5.80078 0L139.90039 1.125c-1.6-1.5-4.20078-1.5-5.80078 0l-13.79883 13.099609c-1.6 1.5-4.20078 1.5-5.80078 0L100.69922 1.125c-1.600001-1.5-4.198829-1.5-5.798829 0l-13.59961 13.099609c-1.6 1.5-4.200781 1.5-5.800781 0L61.699219 1.125c-1.6-1.5-4.198828-1.5-5.798828 0L42.099609 14.224609c-1.6 1.5-4.198828 1.5-5.798828 0L22.5 1.125C21.7.375 20.649609 0 19.599609 0z" fill="#{hex-color($white)}"/></svg>') no-repeat bottom / 100% auto;
+}
+
+// Change the colors used in compose-form
+.compose-form {
+  .compose-form__modifiers {
+    .compose-form__upload__actions .icon-button {
+      color: lighten($white, 7%);
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .compose-form__upload-description input {
+      color: lighten($white, 7%);
+
+      &::placeholder {
+        color: lighten($white, 7%);
+      }
+    }
+  }
+
+  .compose-form__buttons-wrapper {
+    background: darken($ui-base-color, 6%);
+  }
+
+  .autosuggest-textarea__suggestions {
+    background: darken($ui-base-color, 6%);
+  }
+
+  .autosuggest-textarea__suggestions__item {
+    &:hover,
+    &:focus,
+    &:active,
+    &.selected {
+      background: lighten($ui-base-color, 4%);
+    }
+  }
+}
+
+.emoji-mart-bar {
+  border-color: lighten($ui-base-color, 4%);
+
+  &:first-child {
+    background: darken($ui-base-color, 6%);
+  }
+}
+
+.emoji-mart-search input {
+  background: rgba($ui-base-color, 0.3);
+  border-color: $ui-base-color;
+}
+
+// Change the background colors of statuses
+.focusable:focus {
+  background: $ui-base-color;
+}
+
+.status.status-direct {
+  background: lighten($ui-base-color, 4%);
+}
+
+.focusable:focus .status.status-direct {
+  background: lighten($ui-base-color, 8%);
+}
+
+.detailed-status,
+.detailed-status__action-bar {
+  background: darken($ui-base-color, 6%);
+}
+
+// Change the background colors of status__content__spoiler-link
+.reply-indicator__content .status__content__spoiler-link,
+.status__content .status__content__spoiler-link {
+  background: $ui-base-lighter-color;
+
+  &:hover {
+    background: lighten($ui-base-lighter-color, 6%);
+  }
+}
+
+// Change the background colors of media and video spoilers
+.media-spoiler,
+.video-player__spoiler {
+  background: $ui-base-color;
+}
+
+.account-gallery__item a {
+  background-color: $ui-base-color;
+}
+
+// Change the colors used in the dropdown menu
+.dropdown-menu {
+  background: $ui-base-color;
+
+  &__arrow {
+    &.left {
+      border-left-color: $ui-base-color;
+    }
+
+    &.top {
+      border-top-color: $ui-base-color;
+    }
+
+    &.bottom {
+      border-bottom-color: $ui-base-color;
+    }
+
+    &.right {
+      border-right-color: $ui-base-color;
+    }
+  }
+
+  &__item {
+    a {
+      background: $ui-base-color;
+      color: $darker-text-color;
+    }
+  }
+}
+
+// Change the text colors on inverted background
+.privacy-dropdown__option.active .privacy-dropdown__option__content,
+.privacy-dropdown__option.active .privacy-dropdown__option__content strong,
+.privacy-dropdown__option:hover .privacy-dropdown__option__content,
+.privacy-dropdown__option:hover .privacy-dropdown__option__content strong,
+.dropdown-menu__item a:active,
+.dropdown-menu__item a:focus,
+.dropdown-menu__item a:hover,
+.actions-modal ul li:not(:empty) a.active,
+.actions-modal ul li:not(:empty) a.active button,
+.actions-modal ul li:not(:empty) a:active,
+.actions-modal ul li:not(:empty) a:active button,
+.actions-modal ul li:not(:empty) a:focus,
+.actions-modal ul li:not(:empty) a:focus button,
+.actions-modal ul li:not(:empty) a:hover,
+.actions-modal ul li:not(:empty) a:hover button,
+.admin-wrapper .sidebar ul ul a.selected,
+.simple_form .block-button,
+.simple_form .button,
+.simple_form button {
+  color: $white;
+}
+
+.dropdown-menu__separator {
+  border-bottom-color: lighten($ui-base-color, 12%);
+}
+
+// Change the background colors of modals
+.actions-modal,
+.boost-modal,
+.confirmation-modal,
+.mute-modal,
+.report-modal,
+.embed-modal,
+.error-modal,
+.onboarding-modal {
+  background: $ui-base-color;
+}
+
+.boost-modal__action-bar,
+.confirmation-modal__action-bar,
+.mute-modal__action-bar,
+.onboarding-modal__paginator,
+.error-modal__footer {
+  background: darken($ui-base-color, 6%);
+
+  .onboarding-modal__nav,
+  .error-modal__nav {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($ui-base-color, 12%);
+    }
+  }
+}
+
+.display-case__case {
+  background: $white;
+}
+
+.embed-modal .embed-modal__container .embed-modal__html {
+  background: $white;
+
+  &:focus {
+    background: darken($ui-base-color, 6%);
+  }
+}
+
+.react-toggle-track {
+  background: $ui-secondary-color;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background: darken($ui-secondary-color, 10%);
+}
+
+.react-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background: lighten($ui-highlight-color, 10%);
+}
+
+// Change the default color used for the text in an empty column or on the error column
+.empty-column-indicator,
+.error-column {
+  color: $primary-text-color;
+}
+
+// Change the default colors used on some parts of the profile pages
+.activity-stream-tabs {
+  background: $account-background-color;
+  border-bottom-color: lighten($ui-base-color, 8%);
+}
+
+.accounts-grid {
+  .account-grid-card {
+    .controls {
+      .icon-button {
+        color: $darker-text-color;
+      }
+    }
+
+    .name {
+      a {
+        color: $primary-text-color;
+      }
+    }
+
+    .username {
+      color: $darker-text-color;
+    }
+
+    .account__header__content {
+      color: $primary-text-color;
+    }
+  }
+}
+
+.simple_form,
+.table-form {
+  .warning {
+    box-shadow: none;
+    background: rgba($error-red, 0.5);
+    text-shadow: none;
+  }
+}
+
+.status__content,
+.reply-indicator__content {
+  a {
+    color: $highlight-text-color;
+  }
+}
+
+.button.logo-button {
+  color: $white;
+
+  svg path:first-child {
+    fill: $white;
+  }
+}
+
+.public-layout {
+  .header,
+  .public-account-header,
+  .public-account-bio {
+    box-shadow: none;
+    border-radius: 0 !important;
+    background: white;
+  }
+  .public-account-bio {
+    border-radius: 4px !important;
+  }
+
+  .header {
+    background: lighten($ui-base-color, 12%);
+  }
+
+  .public-account-header {
+    &__image {
+      background: lighten($ui-base-color, 12%);
+
+      &::after {
+        box-shadow: none;
+      }
+    }
+
+    &__tabs {
+      &__name {
+        h1,
+        h1 small {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.account__section-headline a.active::after {
+  border-color: transparent transparent $white;
+}
+
+.neko-bg {
+  .neko-bg__content {
+    .container-alt {
+      
+    }
+  }
+}
+
+.getting-started__footer {
+  padding: 0 !important;
+  text-align: center;
+}
+
+.compose-panel .navigation-bar {
+  padding: 10px;
+  background: snow;
+  border-radius: 4px;
+}
+
+/* FORM STUFF ============================================================== */
+
+.compose-form {
+  .compose-form__autosuggest-wrapper {
+    border: $neko-input-border-normal;
+    border-bottom: none;
+  }
+  .compose-form__buttons-wrapper {
+    border: $neko-input-border-normal;
+    border-top: none;
+  }
+}
+
+.column-inline-form {
+  label input {
+    border: $neko-input-border-normal;
+  }
+}
+
+.search {
+  label input {
+    border: $neko-input-border-normal;
+  }
+}
+
+.simple_form {
+  .label_input__append:after {
+    background: transparent !important;
+  }
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  textarea {
+    border: $neko-forms-input-border-normal;
+    &:hover {
+      border: $neko-forms-input-border-hover;
+    }
+    &:active,
+    &:focus {
+      border: $neko-forms-input-border-active;
+    }
+    &:focus:invalid:not(:placeholder-shown) {
+      border: $neko-forms-input-border-invalid;
+    }
+    &:required:valid {
+      border: $neko-forms-input-border-valid;
+    }
+  }
+}
+
+/* MODAL OVERLAY =========================================================== */
+
+.modal-root__overlay {
+  background: hsla(221, 10%, 12%, 0.52);
+}
+
+.actions-modal, .boost-modal, .confirmation-modal, .embed-modal, .error-modal, .mute-modal, .onboarding-modal, .report-modal {
+  background: transparent;
+  box-shadow: 0 0 14px 2px #0000006e;
+}
+
+.confirmation-modal__container, .report-modal__target {
+  background: snow;
+}
+
+.boost-modal__action-bar, .confirmation-modal__action-bar, .error-modal__footer, .mute-modal__action-bar, .onboarding-modal__paginator {
+  background: #444b5df2;
+  border-top: 1px dashed #ffffff8c;
+}
+
+/* STATUSES ================================================================ */
+
+$neko-statusposts-font: "Noto Sans", "Noto Sans JP", sans-serif;
+$neko-statusposts-color: #150c0a;
+$neko-statusposts-displayname-font: "Noto Sans JP", "Noto Sans", sans-serif;
+$neko-statusposts-accountname-color: #32353c;
+$neko-statusposts-accountname-font: "Titillium Web", sans-serif;
+
+.status__content,
+.status__content__read-more-button,
+.statuses-grid .detailed-status.compact .status__content,
+.compose-form .autosuggest-textarea,
+.compose-form .autosuggest-textarea__textarea,
+.compose-form .spoiler-input__input,
+.reply-indicator .reply-indicator__content,
+.directory__card__extra .account__header__content {
+  font-family: $neko-statusposts-font;
+  font-size: 0.825rem; //0.8rem;
+  line-height: 1.25rem; //20px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  color: $neko-statusposts-color;
+  p {
+    br {
+      content: "";
+      display: block;
+      height: 3px;
+    }
+  }
+}
+
+.display-name,
+.display-name__html,
+.display-name__account,
+.reply-indicator__display-name,
+.display-name__html {
+  font-family: $neko-statusposts-displayname-font;
+  font-size: 0.85rem;
+  line-height: 1rem;
+  strong {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  .display-name__account,
+  > span {
+    padding-top: 1px;
+    color: $neko-statusposts-accountname-color;
+    font-family: $neko-statusposts-accountname-font;
+    font-size: 0.85rem; //0.8rem !important;
+    line-height: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+  }
+}
+
+// profilebox in app view
+.navigation-bar__profile {
+  .navigation-bar__profile-account {
+    font-family: $neko-statusposts-displayname-font;
+    font-size: 0.85rem;
+    line-height: 1rem;
+  }
+}
+
+input#account_display_name,
+textarea#account_note,
+.account_fields_name input,
+.account_fields_value input {
+  font-family: $neko-statusposts-font;
+  font-size: 0.95rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+  padding: 7px 10px;
+}
+
+// fix image downscaling for avatars and emojis
+
+.account__avatar,
+img.emojione,
+img.custom-emoji {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering:   -o-crisp-edges;
+  image-rendering:      crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+// emoji interactivity
+img.emojione,
+img.custom-emoji,
+img.status-emoji {
+  vertical-align: middle;
+  transition: transform .2s ease;
+  &:hover {
+    transform: scale(1.5);
+    image-rendering: auto;
+  }
+}
+
+// emoji placement
+.reply-indicator__content .emojione,
+.status__content .emojione,
+.directory__card .emojione {
+  width: 22px;
+  height: 22px;
+  margin: -0.2ex 0.15em 0.2ex 0.15em;
+}
+
+// allow overflow so emoji can scale up
+.status__content {
+  overflow: visible;
+}
+
+// statuspost components paddings
+
+.columns-area--mobile .status__content {
+  padding-top: 4px !important;
+}
+
+.status__content__read-more-button {
+  padding: 6px 0 0 !important;
+}
+
+.columns-area--mobile .status .audio-player, .columns-area--mobile .status .media-gallery, .columns-area--mobile .status .video-player, .columns-area--mobile .status__action-bar {
+  margin-top: 9px !important;
+}
+
+.columns-area--mobile .status {
+  padding: 15px 15px 11px 78px !important;
+}
+
+.embed .status__content, .public-layout .status__content {
+  padding-top: 0;
+}
+
+.detailed-status__display-name {
+  margin-bottom: 10px;
+}
+
+.statuses-grid .detailed-status.compact .detailed-status__meta {
+  margin-top: 10px;
+}
